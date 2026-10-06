@@ -3,15 +3,17 @@ import sqlite3
 import numpy
 import pandas as pd
 
-def update_database(clean_data : pd.DataFrame, db_table_name : str, index : bool):
+def update_database(clean_data : pd.DataFrame, db_table_name : str, index : bool, db_name : str):
     # DictWriter automatically handles header mapping and commas in data
     #clean_data.to_csv(path_file,index=False,mode='a',header=False)  
     # now we also insert here the SQL database upload
 
     # 1. Corregir la ruta: Subir un nivel desde la carpeta del script para encontrar 'database'
     # Esto asegura que busque en /home/milo/sipsa/database/sipsa.db
+
+    
     BASE_DIR = Path(__file__).resolve().parent.parent
-    correct_path = BASE_DIR / "database" / "sipsa.db"
+    correct_path = BASE_DIR / "database" / db_name 
 
 #    try:
         # 2. Definir 'conn' ANTES de usarla

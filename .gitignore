@@ -1,0 +1,47 @@
+# Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache / build
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Pickle / model files
+*.pkl
+*.pickle
+*.joblib
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite3
+*.sql
+*.dump
+database/        # remove this line if you track datasets
+
+# Secrets / config
+.env
+.env.*
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
